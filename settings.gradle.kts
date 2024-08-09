@@ -34,9 +34,9 @@
  *
  * For more information, see: https://github.com/google/ExoPlayer/blob/release-v2/README.md
  */
-File extraSettings = new File(rootDir, 'extra-settings.gradle')
-if (extraSettings.exists()) {
-    apply from: extraSettings
-}
+//File extraSettings = new File(rootDir, 'extra-settings.gradle')
+//if (extraSettings.exists()) {
+//    apply from: extraSettings
+//}
 
-include ':app', ':common', ':automotive'
+include (":app", ":common")

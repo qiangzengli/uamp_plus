@@ -17,11 +17,12 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-parcelize'
 
-android {
+
+android{
     compileSdkVersion rootProject.compileSdkVersion
-
+    namespace "com.example.android.uamp.media"
     defaultConfig {
         versionCode 1
         versionName "1.0"
@@ -39,8 +40,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures{
+        buildConfig true
+    }
     compileOptions {
-        targetCompatibility = '1.8'
+        targetCompatibility = '17'
     }
 
 }
